@@ -2,7 +2,7 @@ import math
 class Error:
     def __init__(self, arr, inst_err):
         self.arr = arr
-        self.insterr = inst_err
+        self.ins_terr = inst_err
 
     def average_x(self):
         return sum(self.arr) / len(self.arr)
@@ -28,7 +28,7 @@ class Error:
             return Ks[12] * Error.dispersion_x(self)
 
     def absolute_error(self):
-        return math.sqrt(Error.confidence_interval(self) ** 2 + ((2 / 3) * self.insterr) ** 2)
+        return math.sqrt(Error.confidence_interval(self) ** 2 + ((2 / 3) * self.ins_terr) ** 2)
 
     def relative_error(self):
         return (Error.absolute_error(self) / Error.average_x(self)) * 100
