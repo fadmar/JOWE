@@ -6,7 +6,7 @@ class Data:
     def data(self):
         MSRM = [0] * self.number_of_measurements
         for i in range(self.number_of_measurements):
-            with open('data' + str(i + 1) + '.txt', 'r') as f:
+            with open('Data/data' + str(i + 1) + '.txt', 'r') as f:
                 x = f.read().splitlines()
                 for j in range(len(x)):
                     x[j] = float(x[j])
