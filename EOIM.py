@@ -17,6 +17,9 @@ class EOIM:  # Error_of_indirect_measurements
         x = arr_of_variable
         z = eval(self.formula)
         return z
+
+
+
 m = [[1,1,1,1,1],[2,2,2,2,2]]
 er1 = Error([1,1,1,1,1], 1)
 er2 = Error([2,2,2,2,2], 1)
