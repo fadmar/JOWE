@@ -25,7 +25,7 @@ class EOIM:  # Error_of_indirect_measurements
         dic = {a: er1.average_x(), b: er2.average_x(), c: er3.average_x(), d: er4.average_x(), e: er5.average_x(),
                f: er6.average_x(), g: er7.average_x(), h: er8.average_x(), i: er9.average_x(), j: er10.average_x()}
         symp_formula = sympify(self.formula)
-        z_average = symp_formula.evalf(subs=dic)  # formula(variant) = "a*b"
+        z_average = symp_formula.evalf(subs=dic)
 
         def mfs():
             s = 0
@@ -66,8 +66,8 @@ class EOIM:  # Error_of_indirect_measurements
             return mfp()
 
 
-m = [[1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
-     [2, 2, 2, 2, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2], [0], [0], [0], [0], [0], [0], [0], [0]]
-ins = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-eoim = EOIM(m, ins, "(a)+(b)")
-print(eoim.mth('0'))
+# m = [[1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+#      [2, 2, 2, 2, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2], [0], [0], [0], [0], [0], [0], [0], [0]]
+# ins = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+# eoim = EOIM(m, ins, "(a)+(b)")
+# print(eoim.mth("0"))
