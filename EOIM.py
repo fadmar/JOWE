@@ -8,7 +8,7 @@ class EOIM:  # Error_of_indirect_measurements
         self.all_inst_err = all_inst_err
         self.formula = formula
 
-    def mth(self, meth):  # method for sum
+    def mth(self, meth, err):  # method for sum
         er1 = Error(self.allmsm[0], self.all_inst_err[0])
         er2 = Error(self.allmsm[1], self.all_inst_err[1])
         er3 = Error(self.allmsm[2], self.all_inst_err[2])
@@ -39,7 +39,10 @@ class EOIM:  # Error_of_indirect_measurements
             s += (diff(symp_formula, j).evalf(subs=dic) * er10.absolute_error()) ** 2
             ind_absol_err = sqrt(s)
             ind_relative_err = (ind_absol_err / z_average) * 100
-            return ind_relative_err
+            if err == 'rel':
+                return ind_relative_err
+            else:
+                return ind_absol_err
 
         def mfp():
             s = 0
@@ -56,7 +59,10 @@ class EOIM:  # Error_of_indirect_measurements
             s += (diff(symp_formula2, j).evalf(subs=dic) * er10.absolute_error()) ** 2
             ind_relative_err = sqrt(s) * 100
             ind_absol_err = z_average * ind_relative_err / 100
-            return ind_relative_err
+            if err == 'rel':
+                return ind_relative_err
+            else:
+                return ind_absol_err
 
         if meth == "0":
             return mfs()
