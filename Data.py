@@ -4,7 +4,7 @@ class Data:
         self.number_of_measurements = number_of_measurements  # количество измерений
 
     def data(self):
-        allmsm = [0] * self.number_of_measurements
+        allmsm = [[0]] * 10
         for i in range(self.number_of_measurements):
             with open('Data/data' + str(i + 1) + '.txt', 'r') as f:
                 x = f.read().splitlines()

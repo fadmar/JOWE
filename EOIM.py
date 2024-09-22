@@ -1,6 +1,4 @@
-import math
 from sympy import *
-import numexpr
 from Error import Error
 
 
