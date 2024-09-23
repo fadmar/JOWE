@@ -1,4 +1,4 @@
-<h6>this program is designed for jerking off with errors measurements of physics.</h6>
+<h6>this program is designed for work with errors measurements of physics.</h6>
 <h6>Программа позволяет рассчитывать абсолютные и относительные погрешности, для прямых и косвенных измерений. В
 последствии функционал будет расширен. </h6>
 <h6>Сначала вам нужно загрузить данные которые программа будет считывать, для этого вам нужно множетво результатов
