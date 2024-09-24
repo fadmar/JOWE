@@ -6,9 +6,9 @@ class Data:
     def data(self):
         allmsm = [[0]] * 10
         for i in range(self.number_of_measurements):
-            with open('Data/data' + str(i + 1) + '.txt', 'r') as f:
+            with open('Data/data' + str(i) + '.txt', 'r') as f:
                 x = f.read().splitlines()
                 for j in range(len(x)):
                     x[j] = float(x[j])
-            allmsm[i] = x
+                allmsm[i] = x
         return allmsm
