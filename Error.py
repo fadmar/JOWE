@@ -13,7 +13,7 @@ class Error:
         for i in range(n):
             x = self.arr[i]
             m[i] = (x - Error.average_x(self)) ** 2
-        dis = math.sqrt(sum(m) / n * (n - 1))
+        dis = math.sqrt(sum(m) / (n - 1))
         return dis
 
     def confidence_interval(self):
